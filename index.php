@@ -1,4 +1,3 @@
-
 <?php
 
 $curl = curl_init();
@@ -49,7 +48,7 @@ function getPost($posts_id){
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma%22%3E">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         .w3-bar-block .w3-bar-item {padding:20px}
     </style>
@@ -57,8 +56,14 @@ function getPost($posts_id){
 </head>
 <body>
 <div class="navbar">
-  <a href="index.php"><h1 class="w3-center w3-padding-16 title">Patch Others Flaws</h1></a>
-  <span>Version admin</span>
+    <div class="nav-left">
+        <a href="index.php"><h1 class="w3-center w3-padding-16 title">Patch Others Flaws</h1></a>
+        <span>Version admin</span>
+    </div>
+    <div class="nav-right">
+        <a href="inscription.php" >Inscription</a>
+        <a href="connexion.php">Connexion</a>
+    </div>
 </div>
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">

@@ -10,7 +10,6 @@ let docEmail = document.getElementById('email')
 let email = docEmail.value
 let docPassword = document.getElementById('password')
 let password = docPassword.value
-console.log(password, email)
 let data ={
     'records':[{
         'fields': {
@@ -37,5 +36,3 @@ fetch(URL, {
     }
 })
 }
-
-

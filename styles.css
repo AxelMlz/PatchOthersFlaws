@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    font-family: "Karma", sans-serif;
+}
+
+.profiles{
+background-color:#2ED171;
+color:white;
+border-radius:30px;
+margin-right: 10px;
+};
+
+body h1 h2 h3 h4 h5 h6 p {
+/* font-family: "Karma", sans-serif; */
+padding: 20px;
+}
+
+h1,h2,p{
+    font-family: "Karma", sans-serif;
+    padding: 20px;
+}
+
+a{
+    color: white;
+}
+
+
+.card-1{
+    margin-top: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding-left: 5px;
+    background-color: #4646FF;
+    color: white;
+    border: 1px;
+    border-style:outset;
+}
+
+.card-2{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 5px;
+    background-color: #6F6FFF;
+    color: white;
+    border: 1px;
+    border-style:outset;
+    margin-bottom: 5px;
+}
+
+.card-3{    
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: red;
+    color: white;
+}
+
+.navbar{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    background: #17419A;
+    font-weight:bold !important;
+}
+.navbar div{
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    font-size:larger;
+}
+
+.content{
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nav-right{
+    padding:10px;
+    font-size: 1.3rem;
+    color:white;
+    display: flex;
+}
+
+.nav-right a {
+    padding:10px;
+    font-weight:bold;
+    text-decoration: none;
+}
