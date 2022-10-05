@@ -1,46 +1,10 @@
 <?php
-
-$curl = curl_init();
-$headers = array(
-    'Content-type: application/json',
-    'Authorization: Bearer keyUwng0eO6raOg5c',
-);
-
-curl_setopt($curl, CURLOPT_URL, 'https://api.airtable.com/v0/appmlNChYw519PUa6/Profiles');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
-
-$resultat = curl_exec($curl);
-curl_close($curl);
-$resultat = json_decode($resultat);
-
-
-$posts = null;
-function getPost($posts_id){
-    $curl = curl_init();
-    $headers = array(
-        'Content-type: application/json',
-        'Authorization: Bearer keyUwng0eO6raOg5c',
-    );
-    if($posts_id){
-        curl_setopt($curl, CURLOPT_URL, 'https://api.airtable.com/v0/appmlNChYw519PUa6/tblIt7XTXmOWrmZ4I?filterByFormula=%28%7BName+%28from+Profiles%29%7D+%3D+%27'.urlencode($posts_id).'%27%29&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc');
-    }else{
-        curl_setopt($curl, CURLOPT_URL, 'https://api.airtable.com/v0/appmlNChYw519PUa6/tblIt7XTXmOWrmZ4I?sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc');
+    session_start();
+    if(!$_SESSION['auth']){
+        header('Location: index.php');
     }
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
 
-    $result = curl_exec($curl);
-
-    curl_close($curl);
-    $result = json_decode($result);
-    $posts = $result->{'records'};
-    showPost($posts);
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,35 +30,39 @@ function getPost($posts_id){
                     <div class="form-name-container">
                         <div class="name-container">
                             <p>Nom</p>
-                            <input type="text" value="dupont" >
+                            <input type="text" value="<?= isset($_SESSION['auth']->{'Last Name'})?$_SESSION['auth']->{'Last Name'} : ''  ?>" >
                         </div>
                         <div class="name-container">
                             <p>Prénom</p>
-                            <input type="text" value="jean" >
+                            <input type="text" value="<?= isset($_SESSION['auth']->{'Name'})?$_SESSION['auth']->{'Name'} : '' ?>" >
                         </div>
                     </div>
                     <p>Adresse Email</p>
-                    <input type="email" value="jean.dupont@gmail.com">
+                    <input type="email" value="<?= isset($_SESSION['auth']->{'Email'})?$_SESSION['auth']->{'Email'} : ''?>" >
                     <div class="form-name-container">
                         <div class="name-container">
                             <p>Mot de passe</p>
-                            <input type="text" >
+                            <input type="password" value="<?= isset($_SESSION['auth']->{'Password'})?$_SESSION['auth']->{'Password'} : '' ?>" >
                         </div>
                         <div class="name-container">
                             <p>Confirmez le mot de passe</p>
-                            <input type="text" >
+                            <input type="password" value="<?= isset($_SESSION['auth']->{'Password'})?$_SESSION['auth']->{'Password'} : '' ?>" >
                         </div>
                     </div>
 
                     <div class="form-name-container">
                         <div class="name-container">
                             <p>Ville</p>
-                            <input type="text" value="Paris" >
+                            <input type="text" value="<?= isset($_SESSION['auth']->{'City'})?$_SESSION['auth']->{'City'} : '' ?>" >
                         </div>
                         <div class="name-container">
                             <p>Adresse</p>
-                            <input type="text" value="31 boulevard des pierres" >
+                            <input type="text" value="<?=isset($_SESSION['auth']->{'Address'})?$_SESSION['auth']->{'Address'} : '' ?>" >
                         </div>
+                    </div>
+                    <div class="name-container">
+                        <p>Code Postal</p>
+                        <input type="text" value="<?= isset($_SESSION['auth']->{'Zipcode'})?$_SESSION['auth']->{'Zipcode'} : '' ?>" >
                     </div>
                     <input type="submit" value="Modifier" class="confirm-btn">
                     </div>
