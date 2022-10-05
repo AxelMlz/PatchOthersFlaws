@@ -14,10 +14,10 @@ console.log(password, email)
 let data ={
     'records':[{
         'fields': {
-            'Name' : "",
-            'Last Name' : "",
-            'Email' : "",
-            'Password' : "",
+            'Name' : nom,
+            'Last Name' : prenom,
+            'Email' : email,
+            'Password' : password,
         } 
     }]
 }
