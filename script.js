@@ -1,33 +1,41 @@
-const key = require('../key.js')
+const API_KEY = 'keyd1MFEbjj1STkyT'
+const URL = `https://api.airtable.com/v0/appmlNChYw519PUa6/Profiles?api_key=${API_KEY}`;
 
-let data = {
-            'records' : [{
-                'fields' : {
-                    'Name' : '',
-                    'Curr' : '',
-                    'Categories' : '',
-                }
-                }]
-        }
+function inscription() {
+let docNom = document.getElementById('nom')
+let nom = docNom.value
+let docPrenom = document.getElementById('prenom')
+let prenom = docPrenom.value    
+let docEmail = document.getElementById('email')
+let email = docEmail.value
+let docPassword = document.getElementById('password')
+let password = docPassword.value
+console.log(password, email)
+let data ={
+    'records':[{
+        'fields': {
+            'Name' : "Sliamni",
+            'Last Name' : "Ethan",
+            'Email' : "soranobounaga@gmail.com",
+            'Password' : "kjbcibrsuiebh",
+        } 
+    }]
+}
 
-        const URL = `https://api.airtable.com/v0/appEThACH88noEOih/Products?api_key=${key}`;
+fetch(URL, {
+    method: "POST",
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+})
+.then((response) => {
+    if(response.ok){
+        response.json().then((data) => {
+            console.log(data);
+        })
+    }else{
+        console.log('Erreur status != 200');
+    }
+})
+}
 
-        fetch(URL, {
-            method: 'POST',
-            headers : {'Content-Type': 'application/json'},
-            body : JSON.stringify(data),
-        })
-        .then((response)=>{
-            if(response.ok){
-                response.json().then((data)=>{
-                    console.log(data)
-                })
-            }
-            else{
-                console.log('erreur status != 200')
-            }
-        })
-        .catch((error)=>{
-            console.log(`Erreur : ${error.message}`)  
-        })
-        
+
