@@ -20,8 +20,7 @@
             </div>
         </div>
         <div class="content">
-            <div class="register">
-                
+            <div class="register">  
                 <div class="form">
                     <h1 class="title" >Inscription</h1>
                     <div class="form-name-container">

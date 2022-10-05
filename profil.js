@@ -10,10 +10,13 @@ function patchProfil() {
     let email = docEmail.value
     let docPassword = document.getElementById('password')
     let password = docPassword.value
+    let docConfirmePassword = document.getElementById('confirmePassword')
+    let confirmePassword = docConfirmePassword.value
     let docAdresse = document.getElementById('adresse')
     let adresse = docAdresse.value
     let docVille = document.getElementById('ville')
     let ville = docVille.value
+    console.log(password)
 
     let data ={
         'records':[{
@@ -28,7 +31,7 @@ function patchProfil() {
             } 
         }]
     }
-    
+    if (password == confirmePassword){
     fetch(URL, {
         method: "PATCH",
         headers: {'Content-Type': 'application/json'},
@@ -43,4 +46,8 @@ function patchProfil() {
             console.log('Erreur status != 200');
         }
     })
+    }else {
+        alert('Error message: les 2 mots de passe sont pas identique veuillez réessayer');
+        console.log('erreur de mots de passe')
+    }
 }
