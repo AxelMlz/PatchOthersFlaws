@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="app">
@@ -20,32 +21,31 @@
         </div>
         <div class="content">
             <div class="register">
-                
                 <form>
                     <h1 class="title" >Inscription</h1>
                     <div class="form-name-container">
                         <div class="name-container">
                             <p>Nom</p>
-                            <input type="text" >
+                            <input type="text" id="nom" >
                         </div>
                         <div class="name-container">
                             <p>Prénom</p>
-                            <input type="text" >
+                            <input type="text" id="prenom" >
                         </div>
                     </div>
                     <p>Adresse Email</p>
-                    <input type="email">
+                    <input type="email" id="email" >
                     <div class="form-name-container">
                         <div class="name-container">
                             <p>Mot de passe</p>
-                            <input type="text" >
+                            <input type="password" id="password" >
                         </div>
                         <div class="name-container">
                             <p>Confirmez le mot de passe</p>
-                            <input type="text" >
+                            <input type="password" id="password2">
                         </div>
                     </div>
-                    <input type="submit" value="Inscription" class="confirm-btn">
+                    <button class="confirm-btn" onclick='inscription()'>Inscription</button>
                     </div>
                 </form>
         <div class="footer">

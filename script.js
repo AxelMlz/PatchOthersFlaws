@@ -29,8 +29,9 @@ fetch(URL, {
 })
 .then((response) => {
     if(response.ok){
+        document.getElementById("good").style.display = "flex";
         response.json().then((data) => {
-            console.log(data );
+            console.log(data);
         })
     }else{
         console.log('Erreur status != 200');
