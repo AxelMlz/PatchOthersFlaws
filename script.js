@@ -22,7 +22,6 @@ let data ={
     }]
 }
 
-
 fetch(URL, {
     method: "POST",
     headers: {'Content-Type': 'application/json'},
