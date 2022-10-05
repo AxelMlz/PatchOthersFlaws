@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.app{
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    /* justify-content: space-between; */
+    font-family: "Karma", sans-serif;
+}
+
+.nav{
+    background: #17419A;
+    height:10vh;
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content: space-between;
+}
+.nav a, .nav p{
+    color:white;
+    font-weight: bold;
+    padding:10px;
+    font-size: 1.3rem;
+}
+
+.nav-right{
+    padding:10px;
+    font-size: 1.3rem;
+    color:white;
+    display: flex;
+}
+.nav-right a{
+    text-decoration: none;
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    min-height:90vh;
+    justify-content: space-between;
+}
+.title{
+    text-align: center;
+    margin:20px;
+}
+.subtitle{
+    width:60%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin:20px;
+}
+.topics{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+}
+.topic{
+    margin-top:20px;
+    margin-bottom:20px;
+    -webkit-box-shadow: 4px 5px 20px -3px #000000; 
+    box-shadow: 4px 5px 20px -3px #000000;
+    padding:15px;
+}
+.topic a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+.footer{
+    background: #17419A;
+    color:white;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    height:60px;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form input, p{
+    margin-left:10px;
+    align-self:start;
+}
+.form-name-container{
+    display: flex;
+    margin-bottom:10px;
+}
+.name-container input{
+    display:flex;
+    flex-direction: column;
+}
+.name-container p{
+    margin-top:10px;
+}
+input{
+    width:250px;
+    height:30px;
+}
+
+.confirm-btn{
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border:none;
+    height:50px;
+    width:50%;
+    align-self:center;
+}
+
+
+*{
+    margin:0;
+}
