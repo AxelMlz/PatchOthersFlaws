@@ -11,14 +11,15 @@
 <body>
     <div class="app">
         
-        <div class="nav">
+    <div class="nav">
         <a href="index.php">Patch-Others-Flaws</a>
-
             <div class="nav-right">
                 <a href="inscription.php">Inscription</a>
                 <a href="connexion.php">Connexion</a>
             </div>
-        </div>
+    </div>
+
+
         <div class="content">
             <div class="register">  
                 <div class="form">

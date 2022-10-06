@@ -1,7 +1,6 @@
 <?php
 
 if(isset($_POST['email']) && isset($_POST['password'])){
-
     $curl = curl_init();
     $headers = array(
     'Content-type: application/json',
@@ -21,7 +20,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
     if($resultat->{'records'}[0]->{'fields'}->{'Password'} == $_POST['password']){
         session_start();
-        $_SESSION['auth'] = $resultat->{'records'}[0]->{'fields'};
+        $_SESSION['auth'] = $resultat->{'records'}[0];
         header('Location: profil.php');
     }
 }
@@ -39,15 +38,14 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 <body>
     <div class="app">
         
-        <div class="nav">
+    <div class="nav">
         <a href="index.php">Patch-Others-Flaws</a>
 
             <div class="nav-right">
                 <a href="inscription.php">Inscription</a>
                 <a href="connexion.php">Connexion</a>
             </div>
-        </div>
-        <div class="content">
+        </div>        <div class="content">
             <div class="register">
                 
                 <form method="post" action="connexion.php">

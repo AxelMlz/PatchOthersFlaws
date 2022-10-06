@@ -10,30 +10,30 @@
     font-family: "Karma", sans-serif;
 }
 
-.nav{
-    background: #17419A;
-    height:10vh;
-    display: flex;
-    align-items: center;
-    width:100%;
-    justify-content: space-between;
-}
-.nav a, .nav p{
-    color:white;
-    font-weight: bold;
-    padding:10px;
-    font-size: 1.3rem;
-}
+    .nav{
+        background: #17419A;
+        height:10vh;
+        display: flex;
+        align-items: center;
+        width:100%;
+        justify-content: space-between;
+    }
+    .nav a, .nav p{
+        color:white;
+        font-weight: bold;
+        padding:10px;
+        font-size: 1.3rem;
+    }
 
-.nav-right{
-    padding:10px;
-    font-size: 1.3rem;
-    color:white;
-    display: flex;
-}
-.nav-right a{
-    text-decoration: none;
-}
+    .nav-right{
+        padding:10px;
+        font-size: 1.3rem;
+        color:white;
+        display: flex;
+    }
+    .nav-right a{
+        text-decoration: none;
+    } 
 .content{
     display: flex;
     align-items: center;

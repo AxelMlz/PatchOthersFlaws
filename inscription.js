@@ -30,6 +30,7 @@ fetch(URL, {
     if(response.ok){
         response.json().then((data) => {
             console.log(data);
+            location.replace("http://localhost/airtable/patch/connexion.php");
         })
     }else{
         console.log('Erreur status != 200');

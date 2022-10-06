@@ -61,10 +61,10 @@ function getPost($posts_id){
         <span>Version admin</span>
     </div>
     <div class="nav-right">
-        <a href="inscription.php" >Inscription</a>
-        <a href="connexion.php">Connexion</a>
+        <?php require('./nav-btn.php') ?>
     </div>
 </div>
+
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
   </div>

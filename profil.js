@@ -1,7 +1,8 @@
 const API_KEY = 'keyd1MFEbjj1STkyT'
 const URL = `https://api.airtable.com/v0/appmlNChYw519PUa6/Profiles?api_key=${API_KEY}`;
 
-function patchProfil() {
+function patchProfil(id) {
+
     let docNom = document.getElementById('nom')
     let nom = docNom.value
     let docPrenom = document.getElementById('prenom')
@@ -16,14 +17,13 @@ function patchProfil() {
     let adresse = docAdresse.value
     let docVille = document.getElementById('ville')
     let ville = docVille.value
-    console.log(password)
 
     let data ={
         'records':[{
-            'id': "recPVrgvOxrPl8XHM",
+            'id': id,
             'fields': {
-                'Name' : nom,
-                'Last Name' : prenom,
+                'Name' : prenom,
+                'Last Name' : nom,
                 'Email' : email,
                 'Password' : password,
                 'Address' : adresse,
