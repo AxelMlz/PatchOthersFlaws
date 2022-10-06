@@ -39,11 +39,11 @@
                     <div class="form-name-container">
                         <div class="name-container">
                             <p>Mot de passe</p>
-                            <input type="text" id="password" >
+                            <input type="password" id="password" >
                         </div>
                         <div class="name-container">
                             <p>Confirmez le mot de passe</p>
-                            <input type="text" id="password2">
+                            <input type="password" id="password2">
                         </div>
                     </div>
                     <button class="confirm-btn" onclick='inscription()'>Inscription</button>
